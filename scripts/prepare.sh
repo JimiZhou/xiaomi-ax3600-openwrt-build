@@ -24,9 +24,6 @@ fi
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-# Zerotier
-git clone https://github.com/mwarning/zerotier-openwrt --single-branch --depth 1 package/new/luci-zerotier
-
 # AutoCore
 svn export https://github.com/immortalwrt/immortalwrt/branches/master/package/emortal/autocore package/new/autocore
 sed -i 's/"getTempInfo" /"getTempInfo", "getCPUBench", "getCPUUsage" /g' package/new/autocore/files/luci-mod-status-autocore.json
